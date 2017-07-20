@@ -19,6 +19,7 @@ you spot any mistakes.
 * Add Amazon RDS GovCloud SSL certificates #1876
 * Add new error codes up to MySQL 5.7.21
 * Include connection ID in debug output
+* Support auth switch in change user flow #1776
 * Support Node.js 9.x
 * Support Node.js 10.x #2003 #2024 #2026 #2034
 * Update Amazon RDS SSL certificates
