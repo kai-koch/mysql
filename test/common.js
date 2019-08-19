@@ -18,19 +18,20 @@ common.fakeServerSocket = __dirname + '/fake_server.sock';
 common.testDatabase = process.env.MYSQL_DATABASE || 'test';
 
 // Export common modules
-common.Auth             = require(common.lib + '/protocol/Auth');
-common.Charsets         = require(common.lib + '/protocol/constants/charsets');
-common.ClientConstants  = require(common.lib + '/protocol/constants/client');
-common.Connection       = require(common.lib + '/Connection');
-common.ConnectionConfig = require(common.lib + '/ConnectionConfig');
-common.Errors           = require(common.lib + '/protocol/constants/errors');
-common.Packets          = require(common.lib + '/protocol/packets');
-common.PacketWriter     = require(common.lib + '/protocol/PacketWriter');
-common.Parser           = require(common.lib + '/protocol/Parser');
-common.PoolConfig       = require(common.lib + '/PoolConfig');
-common.PoolConnection   = require(common.lib + '/PoolConnection');
-common.SqlString        = require(common.lib + '/protocol/SqlString');
-common.Types            = require(common.lib + '/protocol/constants/types');
+common.Auth              = require(common.lib + '/protocol/Auth');
+common.Charsets          = require(common.lib + '/protocol/constants/charsets');
+common.ClientConstants   = require(common.lib + '/protocol/constants/client');
+common.Connection        = require(common.lib + '/Connection');
+common.ConnectionConfig  = require(common.lib + '/ConnectionConfig');
+common.Errors            = require(common.lib + '/protocol/constants/errors');
+common.Packets           = require(common.lib + '/protocol/packets');
+common.PacketWriter      = require(common.lib + '/protocol/PacketWriter');
+common.Parser            = require(common.lib + '/protocol/Parser');
+common.PoolConfig        = require(common.lib + '/PoolConfig');
+common.PoolConnection    = require(common.lib + '/PoolConnection');
+common.SqlString         = require(common.lib + '/protocol/SqlString');
+common.Types             = require(common.lib + '/protocol/constants/types');
+common.PreparedStatement = require(common.lib + '/PreparedStatement');
 
 var Mysql      = require(path.resolve(common.lib, '../index'));
 var FakeServer = require('./FakeServer');
