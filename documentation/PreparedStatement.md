@@ -227,7 +227,7 @@ Alias of PreparedStatement.deallocate()
 
 | Param | Type | Description |
 | --- | --- | --- |
-| callback | [<code>queryCallback</code>](#queryCallback) | cb for the result |
+| callback | [<code>queryCallback</code>](#queryCallback) | CB to recieve the result of the statement |
 
 <a name="PreparedStatement+deallocate"></a>
 
@@ -243,7 +243,7 @@ connection
 
 | Param | Type | Description |
 | --- | --- | --- |
-| callback | [<code>queryCallback</code>](#queryCallback) | cb vor the result |
+| callback | [<code>queryCallback</code>](#queryCallback) | CB to recieve the result of the statement |
 
 <a name="PreparedStatement+defineParameterTypes"></a>
 
@@ -292,7 +292,7 @@ Execute the prepared statement with the currently bound variables
 
 | Param | Type | Description |
 | --- | --- | --- |
-| callback | [<code>queryCallback</code>](#queryCallback) | cb to recieve the result of the statement |
+| callback | [<code>queryCallback</code>](#queryCallback) | CB to recieve the result of the statement |
 
 <a name="PreparedStatement+prepare"></a>
 
@@ -309,7 +309,7 @@ Send the SQL-statement to be prepared to the server
 | Param | Type | Description |
 | --- | --- | --- |
 | sqlStr | <code>String</code> | String that contains the to-be-prepared SQL statement |
-| callback | [<code>queryCallback</code>](#queryCallback) | Cb for the result of the operation |
+| callback | [<code>queryCallback</code>](#queryCallback) | CB to recieve the result of the statement |
 
 <a name="queryCallback"></a>
 
@@ -321,7 +321,7 @@ connection.query(sql, callback) to get the result of a query
 
 | Param | Type | Description |
 | --- | --- | --- |
-| error | <code>error</code> | of the operation. null, if no error |
+| error | <code>error</code> | Erro of the operation. null, if no error occured |
 | results | <code>Array</code> | Resultset of the query, as array of row-objects |
 | fields | <code>Array</code> | An Array of Fields, if applicable |
 
