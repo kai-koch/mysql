@@ -13,7 +13,8 @@
 connection.query(sql, callback) to get the result of a query</p>
 </dd>
 <dt><a href="#forEachCallback">forEachCallback</a> : <code>function</code></dt>
-<dd></dd>
+<dd><p>Callback to use in an array.forEach() call</p>
+</dd>
 </dl>
 
 <a name="PreparedStatement"></a>
@@ -158,7 +159,9 @@ and as many additional arguments as there are types in the types string.
 **Kind**: instance method of [<code>PreparedStatement</code>](#PreparedStatement)  
 **Throws**:
 
-- <code>TypeError</code> 
+- <code>TypeError</code> Throws TypeErrors, when a passed argument is not the
+ correct type or missing or the value arguments do not match the expected
+ count
 
 **Arguments**: <code>(String\|queryCallback\|Number\|Buffer)</code>  
 **Example**  
@@ -201,7 +204,8 @@ d = double (Number), s = String, b = Blob (Buffer)
 **Kind**: instance method of [<code>PreparedStatement</code>](#PreparedStatement)  
 **Throws**:
 
-- <code>TypeError</code> 
+- <code>TypeError</code> Throws TypeError, if an element deviates from the
+ expected prepare type or when an unknown type is encountered
 
 
 | Param | Type | Description |
@@ -218,7 +222,7 @@ Alias of PreparedStatement.deallocate()
 **Kind**: instance method of [<code>PreparedStatement</code>](#PreparedStatement)  
 **Throws**:
 
-- <code>TypeError</code> 
+- <code>TypeError</code> Throws TypeError if the argument is not a function
 
 
 | Param | Type | Description |
@@ -234,7 +238,7 @@ connection
 **Kind**: instance method of [<code>PreparedStatement</code>](#PreparedStatement)  
 **Throws**:
 
-- <code>TypeError</code> 
+- <code>TypeError</code> Throws TypeError if the argument is not a function
 
 
 | Param | Type | Description |
@@ -249,7 +253,8 @@ Set the type of parameters, that are accepted for this prepared statement
 **Kind**: instance method of [<code>PreparedStatement</code>](#PreparedStatement)  
 **Throws**:
 
-- <code>TypeError</code> 
+- <code>TypeError</code> Throws TypeError if argument is not a string or a prepare
+ Type is unknown
 
 
 | Param | Type | Description |
@@ -284,10 +289,6 @@ typStr = 'ssiidb'
 Execute the prepared statement with the currently bound variables
 
 **Kind**: instance method of [<code>PreparedStatement</code>](#PreparedStatement)  
-**Throws**:
-
-- <code>Error</code> 
-
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -301,7 +302,8 @@ Send the SQL-statement to be prepared to the server
 **Kind**: instance method of [<code>PreparedStatement</code>](#PreparedStatement)  
 **Throws**:
 
-- <code>TypeError</code> 
+- <code>TypeError</code> Throws TypeError if the arguments are not of the expected
+ types
 
 
 | Param | Type | Description |
@@ -320,17 +322,19 @@ connection.query(sql, callback) to get the result of a query
 | Param | Type | Description |
 | --- | --- | --- |
 | error | <code>error</code> | of the operation. null, if no error |
-| results | <code>Array</code> | Resultset of the query, as Array of row-objects |
+| results | <code>Array</code> | Resultset of the query, as array of row-objects |
 | fields | <code>Array</code> | An Array of Fields, if applicable |
 
 <a name="forEachCallback"></a>
 
 ## forEachCallback : <code>function</code>
+Callback to use in an array.forEach() call
+
 **Kind**: global typedef  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| element | <code>\*</code> | Current element of the Array |
-| index | <code>Number</code> | Index of the element in the Array |
+| element | <code>\*</code> | Current element of the array |
+| index | <code>Number</code> | Index of the element in the array |
 | arr | <code>Array</code> | The array by refernce |
 
