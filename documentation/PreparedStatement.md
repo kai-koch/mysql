@@ -12,6 +12,8 @@
 <dd><p>The queryCallback Function is supplied to the callback in
 connection.query(sql, callback) to get the result of a query</p>
 </dd>
+<dt><a href="#forEachCallback">forEachCallback</a> : <code>function</code></dt>
+<dd></dd>
 </dl>
 
 <a name="PreparedStatement"></a>
@@ -59,7 +61,7 @@ using the binary protocol
 
 | Param | Type | Description |
 | --- | --- | --- |
-| connection | <code>Connection</code> | The Connection this prepared statement will be bound to |
+| connection | <code>Connection</code> | The Connection to which this prepared statement will be bound |
 
 <a name="PreparedStatement+SQLstr"></a>
 
@@ -320,4 +322,15 @@ connection.query(sql, callback) to get the result of a query
 | error | <code>error</code> | of the operation. null, if no error |
 | results | <code>Array</code> | Resultset of the query, as Array of row-objects |
 | fields | <code>Array</code> | An Array of Fields, if applicable |
+
+<a name="forEachCallback"></a>
+
+## forEachCallback : <code>function</code>
+**Kind**: global typedef  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| element | <code>\*</code> | Current element of the Array |
+| index | <code>Number</code> | Index of the element in the Array |
+| arr | <code>Array</code> | The array by refernce |
 
