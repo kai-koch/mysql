@@ -10,4 +10,5 @@ PreparedStatement.prototype._makeSetStatement
 PreparedStatement.prototype.bindParameter
 PreparedStatement.prototype.cb_bindParamsToBeExec
 PreparedStatement.prototype.defineParameterTypes
+PreparedStatement.prototype._getVarname
 */
